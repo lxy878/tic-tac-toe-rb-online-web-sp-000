@@ -82,5 +82,11 @@ end
 
 # fix
 def winner(board)
+  if won?(board)
+    current_player(board) == "X"? "O" : "X"
+
+  else
+    nil
+  end
   return won?(board)? current_player(board): nil
 end
