@@ -2,6 +2,8 @@
   "RSpec": {
     "coverage": {
       "/home/lucky-subprogram-1873/tic-tac-toe-rb-online-web-sp-000/lib/tic_tac_toe.rb": [
+        1,
+        null,
         null,
         1,
         null,
@@ -64,6 +66,7 @@
         0,
         0,
         0,
+        0,
         null,
         null,
         0,
@@ -89,6 +92,6 @@
         null
       ]
     },
-    "timestamp": 1585145750
+    "timestamp": 1585145961
   }
 }
