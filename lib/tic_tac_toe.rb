@@ -68,7 +68,7 @@ def won?(board)
 end
 
 def full?(board)
-  return board.all? {|position| position=="X"||position=="O" }
+  return board.all? {|position| positon != " " }
 end
 
 def draw?(board)
