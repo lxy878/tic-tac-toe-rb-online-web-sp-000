@@ -77,7 +77,7 @@ def draw?(board)
 end
 
 def over?(board)
-  return (!draw?(board)||won?(board))? true : false
+  return (draw?(board) or won?(board))
 end
 
 # fix
