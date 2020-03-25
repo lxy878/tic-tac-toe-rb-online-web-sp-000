@@ -61,7 +61,7 @@ def won?(board)
   pre = current_player(board) =='X'? "O" : "X"
   WIN_COMBINATIONS.each do |comb|
     binding.pry
-    if comb[0] == pre and comb[1] == pre and comb[2] == pre
+    if board[comb[0]] == pre and borad[comb[1]] == pre and borad[comb[2]] == pre
       return true
     end
   end
