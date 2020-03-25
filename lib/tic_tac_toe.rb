@@ -62,7 +62,7 @@ def won?(board)
   won = false
   WIN_COMBINATIONS.each do |comb|
     if board[comb[0]] == pre and board[comb[1]] == pre and board[comb[2]] == pre
-      return true
+      won = true
     end
   end
   return false
