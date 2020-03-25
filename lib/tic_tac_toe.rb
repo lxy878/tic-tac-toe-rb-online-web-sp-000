@@ -71,9 +71,7 @@ def full?(board)
   return board.all? {|position| position=="X"||position=="O" }
 end
 
-# fix
 def draw?(board)
-  # won? == false
   return !(won?(board) and full?(board))
 end
 
