@@ -59,6 +59,7 @@ end
 
 def won?(board)
   pre = current_player(board) =='X'? "O" : "X"
+  won = false
   WIN_COMBINATIONS.each do |comb|
     if board[comb[0]] == pre and board[comb[1]] == pre and board[comb[2]] == pre
       return true
