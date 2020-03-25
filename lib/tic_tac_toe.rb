@@ -78,7 +78,7 @@ def draw?(board)
   # false
   # return !(won?(board) and full?(board))
   binding.pry
-  return (!won?(borad) and full?(board))
+  return (!won?(board) and full?(board))
 end
 
 def over?(board)
