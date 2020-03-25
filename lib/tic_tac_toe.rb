@@ -65,7 +65,7 @@ def won?(board)
       won = true
     end
   end
-  return false
+  won
 end
 
 def full?(board)
