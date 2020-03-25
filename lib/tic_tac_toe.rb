@@ -73,11 +73,6 @@ def full?(board)
 end
 
 def draw?(board)
-  # return false if won?(board)
-  # return true full?(board)
-  # false
-  # return !(won?(board) and full?(board))
-  # binding.pry
   return (!won?(board) and full?(board))
 end
 
