@@ -1,3 +1,5 @@
+require 'pry'
+
 WIN_COMBINATIONS = [
   [0, 1, 2],[3, 4, 5],[6, 7, 8],[0, 3, 6],
   [1, 4, 7],[2, 5, 8],[0, 4, 8],[6, 4, 2]
@@ -56,30 +58,33 @@ def play(board)
 end
 
 def won?(board)
-  pre = current_player =='X'? "O" : "X"
+  pre = current_player(board) =='X'? "O" : "X"
+  won = false
   WIN_COMBINATIONS.each do |comb|
-    if comb[0] == pre and comb[1] == pre and comb[2] == pre
-      return true
+    if board[comb[0]] == pre and board[comb[1]] == pre and board[comb[2]] == pre
+      won = true
     end
   end
-  return false
+  won
 end
 
 def full?(board)
-  return board.all? {|position| position=="X"||position=="O" }
+  return !board.include?(" ")
 end
 
-# fix
 def draw?(board)
-  # won? == false
-  return !(won?(board) and full?(board))
+  return (!won?(board) and full?(board))
 end
 
 def over?(board)
-  return (!draw?(board)||won?(board))? true : false
+  return (draw?(board) or won?(board))
 end
 
 # fix
 def winner(board)
-  return won?(board)? current_player(board): nil
+  if won?(board)
+    current_player(board) == "X"? "O" : "X"
+  else
+    nil
+  end
 end
